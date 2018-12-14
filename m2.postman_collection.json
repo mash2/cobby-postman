@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "21406e41-e137-4535-99de-b020b1b7decd",
-		"name": "Magento 2_bak ab 1.47",
+		"_postman_id": "1a0db1e8-b94b-48d9-9d02-402e4dbcd695",
+		"name": "m2",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -929,7 +929,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"jsonData\": \"\r\n  [{\r\n    \\\"product_id\\\" : \\\"321\\\",\r\n    \\\"product_type\\\" : \\\"simple\\\",\r\n    \\\"qty\\\" : \\\"20\\\",\r\n    \\\"is_in_stock\\\" : \\\"1\\\"\r\n  }]\r\n  \"\r\n}\r\n"
+					"raw": "{\"jsonData\": \"{\\\"2045\\\":{\\\"product_id\\\":\\\"2045\\\",\\\"product_type\\\":\\\"simple\\\",\\\"qty\\\":\\\"1\\\",\\\"is_in_stock\\\":\\\"1\\\",\\\"inventory_sources\\\":[{\\\"sku\\\":\\\"WSH12-32-Red\\\",\\\"status\\\":\\\"1\\\",\\\"source_code\\\":\\\"default\\\",\\\"quantity\\\":\\\"5\\\"}]}}\"}\r\n"
 				},
 				"url": {
 					"raw": "{{shopUrl}}V1/cobby/import/products/stocks",
@@ -1245,6 +1245,30 @@
 						"cobby",
 						"indexer",
 						"reindex"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cobby/export/inventory/sources",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{shopUrl}}V1/cobby/export/inventory/sources",
+					"host": [
+						"{{shopUrl}}V1"
+					],
+					"path": [
+						"cobby",
+						"export",
+						"inventory",
+						"sources"
 					]
 				}
 			},
