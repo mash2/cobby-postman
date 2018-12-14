@@ -1,8 +1,8 @@
 {
 	"variables": [],
 	"info": {
-		"name": "Magento 1 bis 1.37",
-		"_postman_id": "d64c4c94-80c8-6e5b-10c1-b29c2ee44969",
+		"name": "Magento 1 ab 1.38",
+		"_postman_id": "02eaa798-2eff-c601-9933-6b8783a59f33",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -12,7 +12,13 @@
 			"request": {
 				"url": "{{shopUrl}}",
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic bWFzaDI6Y29iYnljYW4h",
+						"description": ""
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\"method\":\"login\",\"params\":[\"{{apiUser}}\",\"{{apiPassword}}\"],\"id\":\"id\"}"
@@ -29,7 +35,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n   \"method\":\"call\",\n   \"params\":[\n      \"{{sessionKey}}\",\n      \"cobby_core_acl.getAclInfos\",\n      []\n   ],\n   \"id\":\"id\"\n}"
+					"raw": "{\n   \"method\":\"call\",\n   \"params\":[\n      \"{{sessionKey}}\",\n      \"cobby_core_acl.export\",\n      [        \n      ]\n   ],\n   \"id\":\"id\"\n}"
 				},
 				"description": ""
 			},
@@ -54,10 +60,16 @@
 			"request": {
 				"url": "{{shopUrl}}",
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic bWFzaDI6Y29iYnljYW4h",
+						"description": ""
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\",\r\n\t\t\"cobby_catalog_product_attribute.list\",\r\n\t\t[\"AttributeSetID\"]],\r\n\t\"id\": \"id\"\r\n}"
+					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\",\r\n\t\t\"cobby_catalog_product_attribute.export\",\r\n\t\t[\"AttributeSetID\"]],\r\n\t\"id\": \"id\"\r\n}"
 				},
 				"description": ""
 			},
@@ -68,10 +80,21 @@
 			"request": {
 				"url": "{{shopUrl}}",
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic bWFzaDI6Y29iYnljYW4h",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"method\": \"call\",\n\t\"params\": [\"{{sessionKey}}\", \"cobby_catalog_product_attribute.saveOptions\", [[{\n\t\t\t\t\t\"attribute_id\": 272,\n\t\t\t\t\t\"options\": [{\n\t\t\t\t\t\t\t\"option_id\": \"option1\",\n\t\t\t\t\t\t\t\"option_key\": \"key272Green_6\",\n\t\t\t\t\t\t\t\"labels\": [{\n\t\t\t\t\t\t\t\t\t\"store_id\": 0,\n\t\t\t\t\t\t\t\t\t\"value\": \"Green_6\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t}\n\t\t\t]]],\n\t\"id\": \"id\"\n}"
+					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}}}\", \"cobby_catalog_product_attribute_option.import\", [[{\r\n\t\t\t\t\t\"attribute_id\": 92,\r\n\t\t\t\t\t\"options\": [{\r\n\t\t\t\t\t\t\t\"option_id\": \"option1\",\r\n\t\t\t\t\t\t\t\"option_key\": \"key92NeueFarbe\",\r\n\t\t\t\t\t\t\t\"labels\": [{\r\n\t\t\t\t\t\t\t\t\t\"store_id\": 0,\r\n\t\t\t\t\t\t\t\t\t\"value\": \"NeueFarbe\"\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t]\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t}\r\n\t\t\t]]],\r\n\t\"id\": \"id\"\r\n}"
 				},
 				"description": "cobby_catalog_product_attribute.saveOptions"
 			},
@@ -82,10 +105,21 @@
 			"request": {
 				"url": "{{shopUrl}}",
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic bWFzaDI6Y29iYnljYW4h",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"method\": \"call\",\n\t\"params\": [\"{{sessionKey}}\", \"cobby_catalog_product_attribute.saveOptions\", [[{\n\t\t\t\t\t\"attribute_id\": 272,\n\t\t\t\t\t\"options\": [{\n\t\t\t\t\t\t\t\"option_id\": \"156\",\n\t\t\t\t\t\t\t\"option_key\": null,\n\t\t\t\t\t\t\t\"labels\": [{\n\t\t\t\t\t\t\t\t\t\"store_id\": 0,\n\t\t\t\t\t\t\t\t\t\"value\": \"Green_6\"\n\t\t\t\t\t\t\t\t}, {\n\t\t\t\t\t\t\t\t\t\"store_id\": 1,\n\t\t\t\t\t\t\t\t\t\"value\": \"Green_6_en\"\n\t\t\t\t\t\t\t\t}\n\t\t\t\t\t\t\t]\n\t\t\t\t\t\t}\n\t\t\t\t\t]\n\t\t\t\t}\n\t\t\t]]],\n\t\"id\": \"id\"\n}"
+					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\", \"cobby_catalog_product_attribute_option.import\", [[{\r\n\t\t\t\t\t\"attribute_id\": 92,\r\n\t\t\t\t\t\"options\": [{\r\n\t\t\t\t\t\t\t\"option_id\": \"285\",\r\n\t\t\t\t\t\t\t\"option_key\": null,\r\n\t\t\t\t\t\t\t\"labels\": [{\r\n\t\t\t\t\t\t\t\t\t\"store_id\": 0,\r\n\t\t\t\t\t\t\t\t\t\"value\": \"NeueFarbe\"\r\n\t\t\t\t\t\t\t\t}, {\r\n\t\t\t\t\t\t\t\t\t\"store_id\": 1,\r\n\t\t\t\t\t\t\t\t\t\"value\": \"NewColor\"\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t]\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t]\r\n\t\t\t\t}\r\n\t\t\t]]],\r\n\t\"id\": \"id\"\r\n}"
 				},
 				"description": "cobby_catalog_product_attribute.saveOptions"
 			},
@@ -99,7 +133,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\",\r\n\t\t\"cobby_catalog_product_attribute.options\",\r\n\t\t[\"AttributeID\"]],\r\n\t\"id\": \"id\"\r\n}"
+					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\",\r\n\t\t\"cobby_catalog_product_attribute_option.export\",\r\n\t\t[\"AttributeID\"]],\r\n\t\"id\": \"id\"\r\n}"
 				},
 				"description": "catalog_product_attribute.options"
 			},
@@ -113,7 +147,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\",\r\n\t\t\"cobby_catalog_product_attribute_set.list\",\r\n\t\t[\"\"]],\r\n\t\"id\": \"id\"\r\n}"
+					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\",\r\n\t\t\"cobby_catalog_product_attribute_set.export\",\r\n\t\t[]],\r\n\t\"id\": \"id\"\r\n}"
 				},
 				"description": "cobby_catalog_product_attribute_set.list"
 			},
@@ -127,13 +161,13 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\",\r\n\t\t\"cobby_catalog_category.tree\",\r\n\t\t[1, \"storeId\"]],\r\n\t\"id\": \"id\"\r\n}"
+					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\",\r\n\t\t\"cobby_catalog_category.export\",\r\n\t\t[1, \"storeId\"]],\r\n\t\"id\": \"id\"\r\n}"
 				},
 				"description": "catalog_category.tree"
 			},
 			"response": [
 				{
-					"id": "6148b66e-e5f1-492c-bf28-aedee114fd79",
+					"id": "17e42a04-93fa-49ee-bf3f-2670ecbd9542",
 					"name": "blub",
 					"originalRequest": {
 						"url": "{{shopUrl}}",
@@ -201,7 +235,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n   \"method\":\"call\",\n   \"params\":[\n      \"{{sessionKey}}\",\n      \"cobby_core_config.getConfigs\",\n      [        \n      ]\n   ],\n   \"id\":\"id\"\n}"
+					"raw": "{\n   \"method\":\"call\",\n   \"params\":[\n      \"{{sessionKey}}\",\n      \"cobby_core_config.export\",\n      [        \n      ]\n   ],\n   \"id\":\"id\"\n}"
 				},
 				"description": ""
 			},
@@ -215,7 +249,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n   \"method\":\"call\",\n   \"params\":[\n      \"{{sessionKey}}\",\n      \"cobby_customer_group.list\",\n      [        \n      ]\n   ],\n   \"id\":\"id\"\n}"
+					"raw": "{\n   \"method\":\"call\",\n   \"params\":[\n      \"{{sessionKey}}\",\n      \"cobby_customer_group.export\",\n      [        \n      ]\n   ],\n   \"id\":\"id\"\n}"
 				},
 				"description": ""
 			},
@@ -229,7 +263,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"method\": \"call\",\n  \"params\": [\"{{sessionKey}}\",\n  \"cobby_indexer.list\",\n  []],\n  \"id\": \"id\"\n}"
+					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\",\r\n\t\t\"cobby_indexer.export\",\r\n\t\t[]],\r\n\t\"id\": \"id\"\r\n}"
 				},
 				"description": "cobby_indexer.list"
 			},
@@ -257,7 +291,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n   \"method\":\"call\",\n   \"params\":[\n      \"{{sessionKey}}\",\n      \"cobby_export.exportProducts\",\n      [\n    [ 16, 17]\n      ]\n   ],\n   \"id\":\"id\"\n}"
+					"raw": "{\n   \"method\":\"call\",\n   \"params\":[\n      \"{{sessionKey}}\",\n      \"cobby_export.exportProducts\",\n      [\n    {\"16\":\"\", \"17\":\"\"}\n      ]\n   ],\n   \"id\":\"id\"\n}"
 				},
 				"description": ""
 			},
@@ -305,7 +339,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\", \"cobby_import_product.importProducts\", [[{\r\n\t\t\t\t\t\"sku\": \"test_push_8\",\r\n\t\t\t\t\t\"_attribute_set\": \"Warranties\",\r\n\t\t\t\t\t\"_type\": \"simple\",\r\n\t\t\t\t\t\"_store\": \"\",\r\n\t\t\t\t\t\"_id\": \"236\",\r\n\t\t\t\t\t\"meta_title\": \"meta\"\r\n\t\t\t\t}\r\n\t\t\t], [\"simple\"], [\"test_push_8\"]]],\r\n\t\"id\": \"id\"\r\n}"
+					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\", \"cobby_import_product.importProducts\", [[{\r\n\t\t\t\t\t\"sku\": \"ams000\",\r\n\t\t\t\t\t\"_attribute_set\": \"Shoes\",\r\n\t\t\t\t\t\"_type\": \"simple\",\r\n\t\t\t\t\t\"_store\": \"\",\r\n\t\t\t\t\t\"_id\": \"355\",\r\n\t\t\t\t\t\"meta_title\": \"meta\"\r\n\t\t\t\t}\r\n\t\t\t], [\"simple\"], [\"ams000\"], \"<transactionId>\"]],\r\n\t\"id\": \"id\"\r\n}"
 				},
 				"description": "cobby_export.exportProducts"
 			},
@@ -333,7 +367,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\", \"cobby_import_product.updateCategoryAssociations\", [[{\r\n\t\t\t\t\t\"product_id\": 191,\r\n\t\t\t\t\t\"categories\": [3, 22]\r\n\t\t\t\t}\r\n\t\t\t]]],\r\n\t\"id\": \"id\"\r\n}"
+					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\", \"cobby_import_product.updateCategoryAssociations\", [[{\r\n\t\t\t\t\t\"product_id\": 355,\r\n\t\t\t\t\t\"categories\": [20, 21]\r\n\t\t\t\t}\r\n\t\t\t]]],\r\n\t\"id\": \"id\"\r\n}"
 				},
 				"description": ""
 			},
@@ -347,7 +381,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\", \"cobby_import_product.updateConfigurableProducts\", [{\r\n\t\t\t\t\"119\": {\r\n\t\t\t\t\t\"product_id\": 119,\r\n\t\t\t\t\t\"attr_set_code\": \"Shörts T\",\r\n\t\t\t\t\t\"attributes\": [{\r\n\t\t\t\t\t\t\t\"attribute_id\": 525,\r\n\t\t\t\t\t\t\t\"code\": \"shirt_size\",\r\n\t\t\t\t\t\t\t\"labels\": [{\r\n\t\t\t\t\t\t\t\t\t\"store_id\": 0,\r\n\t\t\t\t\t\t\t\t\t\"use_default\": false,\r\n\t\t\t\t\t\t\t\t\t\"value\": \"Size\"\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t],\r\n\t\t\t\t\t\t\t\"options\": [{\r\n\t\t\t\t\t\t\t\t\t\"option_id\": \"98\",\r\n\t\t\t\t\t\t\t\t\t\"price\": \"25\",\r\n\t\t\t\t\t\t\t\t\t\"is_percent\": true,\r\n\t\t\t\t\t\t\t\t\t\"website_id\": 0\r\n\t\t\t\t\t\t\t\t}, {\r\n\t\t\t\t\t\t\t\t\t\"option_id\": \"99\",\r\n\t\t\t\t\t\t\t\t\t\"price\": \"1.5\",\r\n\t\t\t\t\t\t\t\t\t\"is_percent\": false,\r\n\t\t\t\t\t\t\t\t\t\"website_id\": 0\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t]\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t],\r\n\t\t\t\t\t\"associated_ids\": [35, 117, 125]\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t]],\r\n\t\"id\": \"id\"\r\n}"
+					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\", \"cobby_import_product.updateConfigurableProducts\", [{\r\n\t\t\t\t\"433\": {\r\n\t\t\t\t\t\"product_id\": 433,\r\n\t\t\t\t\t\"attr_set_code\": \"Shoes\",\r\n\t\t\t\t\t\"attributes\": [{\r\n\t\t\t\t\t\t\t\"attribute_id\": 92,\r\n\t\t\t\t\t\t\t\"code\": \"color\",\r\n\t\t\t\t\t\t\t\"labels\": [{\r\n\t\t\t\t\t\t\t\t\t\"store_id\": 0,\r\n\t\t\t\t\t\t\t\t\t\"use_default\": true,\r\n\t\t\t\t\t\t\t\t\t\"value\": \"Color\"\r\n\t\t\t\t\t\t\t\t}, {\r\n\t\t\t\t\t\t\t\t\t\"store_id\": 1,\r\n\t\t\t\t\t\t\t\t\t\"use_default\": true,\r\n\t\t\t\t\t\t\t\t\t\"value\": \"Color\"\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t],\r\n\t\t\t\t\t\t\t\"options\": []\r\n\t\t\t\t\t\t}, {\r\n\t\t\t\t\t\t\t\"attribute_id\": 186,\r\n\t\t\t\t\t\t\t\"code\": \"shoe_size\",\r\n\t\t\t\t\t\t\t\"labels\": [{\r\n\t\t\t\t\t\t\t\t\t\"store_id\": 0,\r\n\t\t\t\t\t\t\t\t\t\"use_default\": true,\r\n\t\t\t\t\t\t\t\t\t\"value\": \"Shoe size\"\r\n\t\t\t\t\t\t\t\t}, {\r\n\t\t\t\t\t\t\t\t\t\"store_id\": 1,\r\n\t\t\t\t\t\t\t\t\t\"use_default\": true,\r\n\t\t\t\t\t\t\t\t\t\"value\": \"Shoe size\"\r\n\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t],\r\n\t\t\t\t\t\t\t\"options\": []\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t],\r\n\t\t\t\t\t\"associated_ids\": [363, 368]\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t]],\r\n\t\"id\": \"id\"\r\n}"
 				},
 				"description": ""
 			},
@@ -361,7 +395,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\", \"cobby_import_product.updateCustomOptions\", [{\r\n\t\t\t\t\"167\": [{\r\n\t\t\t\t\t\t\"option_id\": null,\r\n\t\t\t\t\t\t\"type\": \"drop_down\",\r\n\t\t\t\t\t\t\"is_require\": 0,\r\n\t\t\t\t\t\t\"sku\": \"\",\r\n\t\t\t\t\t\t\"max_characters\": 0,\r\n\t\t\t\t\t\t\"file_extension\": null,\r\n\t\t\t\t\t\t\"image_size_x\": 0,\r\n\t\t\t\t\t\t\"image_size_y\": 0,\r\n\t\t\t\t\t\t\"sort_order\": 0,\r\n\t\t\t\t\t\t\"titles\": [{\r\n\t\t\t\t\t\t\t\t\"store_id\": 0,\r\n\t\t\t\t\t\t\t\t\"title\": \"Neue_Custom_Option\"\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t],\r\n\t\t\t\t\t\t\"prices\": [],\r\n\t\t\t\t\t\t\"values\": [{\r\n\t\t\t\t\t\t\t\t\"option_type_id\": null,\r\n\t\t\t\t\t\t\t\t\"sku\": \"\",\r\n\t\t\t\t\t\t\t\t\"titles\": [{\r\n\t\t\t\t\t\t\t\t\t\t\"store_id\": 0,\r\n\t\t\t\t\t\t\t\t\t\t\"title\": \"neuer Titel\"\r\n\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t],\r\n\t\t\t\t\t\t\t\t\"prices\": [{\r\n\t\t\t\t\t\t\t\t\t\t\"store_id\": 0,\r\n\t\t\t\t\t\t\t\t\t\t\"price\": \"10\",\r\n\t\t\t\t\t\t\t\t\t\t\"price_type\": \"fixed\"\r\n\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t],\r\n\t\t\t\t\t\t\t\t\"sort_order\": 0\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t]\r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t]],\r\n\t\"id\": \"id\"\r\n}"
+					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\", \"cobby_import_product.updateCustomOptions\", [{\r\n\t\t\t\t\"355\": [{\r\n\t\t\t\t\t\t\"option_id\": null,\r\n\t\t\t\t\t\t\"type\": \"drop_down\",\r\n\t\t\t\t\t\t\"is_require\": 0,\r\n\t\t\t\t\t\t\"sku\": \"\",\r\n\t\t\t\t\t\t\"max_characters\": 0,\r\n\t\t\t\t\t\t\"file_extension\": null,\r\n\t\t\t\t\t\t\"image_size_x\": 0,\r\n\t\t\t\t\t\t\"image_size_y\": 0,\r\n\t\t\t\t\t\t\"sort_order\": 0,\r\n\t\t\t\t\t\t\"titles\": [{\r\n\t\t\t\t\t\t\t\t\"store_id\": 0,\r\n\t\t\t\t\t\t\t\t\"title\": \"Neue Option\"\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t],\r\n\t\t\t\t\t\t\"prices\": [],\r\n\t\t\t\t\t\t\"values\": [{\r\n\t\t\t\t\t\t\t\t\"option_type_id\": null,\r\n\t\t\t\t\t\t\t\t\"sku\": \"\",\r\n\t\t\t\t\t\t\t\t\"titles\": [{\r\n\t\t\t\t\t\t\t\t\t\t\"store_id\": 0,\r\n\t\t\t\t\t\t\t\t\t\t\"title\": \"Neuer Titel\"\r\n\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t],\r\n\t\t\t\t\t\t\t\t\"prices\": [{\r\n\t\t\t\t\t\t\t\t\t\t\"store_id\": 0,\r\n\t\t\t\t\t\t\t\t\t\t\"price\": \"10\",\r\n\t\t\t\t\t\t\t\t\t\t\"price_type\": \"fixed\"\r\n\t\t\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t\t\t],\r\n\t\t\t\t\t\t\t\t\"sort_order\": 0\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t]\r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t]],\r\n\t\"id\": \"id\"\r\n}"
 				},
 				"description": ""
 			},
@@ -375,7 +409,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n   \"method\":\"call\",\n   \"params\":[\n      \"{{sessionKey}}\",\n      \"cobby_import_product.updateGroupPrices\",\n      [\n        {\n        \"200\" : \n          [\n             {\n             \"customer_group_id\":0,\n             \"value\":128.34,\n             \"website_id\":0\n             },\n             {\n             \"customer_group_id\":1,\n             \"value\":90.34,\n             \"website_id\":1\n             }\n             ],\n         \"199\" : \n          [\n             {\n             \"customer_group_id\":0,\n             \"value\":128.34,\n             \"website_id\":0\n             },\n             {\n             \"customer_group_id\":1,\n             \"value\":90.34,\n             \"website_id\":1\n             }\n             ]\n        }\n      ]\n   ],\n   \"id\":\"id\"\n}"
+					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\", \"cobby_import_product.updateGroupPrices\", [{\r\n\t\t\t\t\"355\": [{\r\n\t\t\t\t\t\t\"customer_group_id\": 1,\r\n\t\t\t\t\t\t\"value\": 410.0,\r\n\t\t\t\t\t\t\"website_id\": 0\r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t]],\r\n\t\"id\": \"id\"\r\n}"
 				},
 				"description": ""
 			},
@@ -389,7 +423,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\", \"cobby_import_product.updateGroupedProductAssociations\", [{\r\n\t\t\t\t\"202\": {\r\n\t\t\t\t\t\"product_id\": 202,\r\n\t\t\t\t\t\"_associated_ids\": {\r\n\t\t\t\t\t\t\"190\": {\r\n\t\t\t\t\t\t\t\"qty\": \"0\",\r\n\t\t\t\t\t\t\t\"pos\": 1\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\"236\": {\r\n\t\t\t\t\t\t\t\"qty\": \"0\",\r\n\t\t\t\t\t\t\t\"pos\": 2\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t]],\r\n\t\"id\": \"id\"\r\n}"
+					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\", \"cobby_import_product.updateGroupedProductAssociations\", [{\r\n\t\t\t\t\"440\": {\r\n\t\t\t\t\t\"product_id\": 440,\r\n\t\t\t\t\t\"_associated_ids\": {\r\n\t\t\t\t\t\t\"387\": {\r\n\t\t\t\t\t\t\t\"qty\": \"0\",\r\n\t\t\t\t\t\t\t\"pos\": 1\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\"388\": {\r\n\t\t\t\t\t\t\t\"qty\": \"0\",\r\n\t\t\t\t\t\t\t\"pos\": 2\r\n\t\t\t\t\t\t},\r\n\t\t\t\t\t\t\"385\": {\r\n\t\t\t\t\t\t\t\"qty\": \"0\",\r\n\t\t\t\t\t\t\t\"pos\": 3\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t}\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t]],\r\n\t\"id\": \"id\"\r\n}"
 				},
 				"description": ""
 			},
@@ -403,7 +437,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\", \"cobby_import_product.updateMedia\", [{\r\n\t\t\t\t\"184\": {\r\n\t\t\t\t\t\"images\": [{\r\n\t\t\t\t\t\t\t\"image\": \"057471-3.jpg\",\r\n\t\t\t\t\t\t\t\"name\": \"057471-3.jpg\",\r\n\t\t\t\t\t\t\t\"file\": \"/0/5/057471-3.jpg\",\r\n\t\t\t\t\t\t\t\"import\": \"\",\r\n\t\t\t\t\t\t\t\"upload\": \"\"\r\n\t\t\t\t\t\t}, {\r\n\t\t\t\t\t\t\t\"image\": \"amd-phenom-x4-9850-black-ed-2-50ghz-retail_1.jpg\",\r\n\t\t\t\t\t\t\t\"name\": \"amd-phenom-x4-9850-black-ed-2-50ghz-retail_1.jpg\",\r\n\t\t\t\t\t\t\t\"file\": \"/a/m/amd-phenom-x4-9850-black-ed-2-50ghz-retail_1.jpg\",\r\n\t\t\t\t\t\t\t\"import\": \"\",\r\n\t\t\t\t\t\t\t\"upload\": \"\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t],\r\n\t\t\t\t\t\"gallery\": {\r\n\t\t\t\t\t\t\"0\": [{\r\n\t\t\t\t\t\t\t\t\"image\": \"057471-3.jpg\",\r\n\t\t\t\t\t\t\t\t\"disabled\": false,\r\n\t\t\t\t\t\t\t\t\"position\": 1,\r\n\t\t\t\t\t\t\t\t\"label\": \"pulli\"\r\n\t\t\t\t\t\t\t}, {\r\n\t\t\t\t\t\t\t\t\"image\": \"amd-phenom-x4-9850-black-ed-2-50ghz-retail_1.jpg\",\r\n\t\t\t\t\t\t\t\t\"disabled\": false,\r\n\t\t\t\t\t\t\t\t\"position\": 2,\r\n\t\t\t\t\t\t\t\t\"label\": \"pulli2\"\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t]\r\n\t\t\t\t\t},\r\n\t\t\t\t\t\"attributes\": {},\r\n\t\t\t\t\t\"use_default_stores\": []\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t]],\r\n\t\"id\": \"id\"\r\n}"
+					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\", \"cobby_import_product.updateMedia\", [{\r\n\t\t\t\t\"355\": {\r\n\t\t\t\t\t\"images\": [{\r\n\t\t\t\t\t\t\t\"image\": \"ams000b_1_1.jpg\",\r\n\t\t\t\t\t\t\t\"name\": \"ams000b_1_1.jpg\",\r\n\t\t\t\t\t\t\t\"file\": \"/a/m/ams000b_1_1.jpg\",\r\n\t\t\t\t\t\t\t\"import\": \"\",\r\n\t\t\t\t\t\t\t\"upload\": \"\"\r\n\t\t\t\t\t\t}, {\r\n\t\t\t\t\t\t\t\"image\": \"ams000a_1_1_blub_bla.jpg\",\r\n\t\t\t\t\t\t\t\"name\": \"ams000a_1_1_blub_bla.jpg\",\r\n\t\t\t\t\t\t\t\"file\": \"/a/m/ams000a_1_1_blub_bla.jpg\",\r\n\t\t\t\t\t\t\t\"import\": \"\",\r\n\t\t\t\t\t\t\t\"upload\": \"\"\r\n\t\t\t\t\t\t}, {\r\n\t\t\t\t\t\t\t\"image\": \"amd-phenom-x4-9850-black-ed-2-50ghz-retail.jpg\",\r\n\t\t\t\t\t\t\t\"name\": \"amd-phenom-x4-9850-black-ed-2-50ghz-retail.jpg\",\r\n\t\t\t\t\t\t\t\"file\": \"\",\r\n\t\t\t\t\t\t\t\"import\": \"\",\r\n\t\t\t\t\t\t\t\"upload\": \"http://cobbystorage.mash2.com/images/dd5428574c3e00327214292bb4a19309/amd-phenom-x4-9850-black-ed-2-50ghz-retail.jpg\"\r\n\t\t\t\t\t\t}\r\n\t\t\t\t\t],\r\n\t\t\t\t\t\"gallery\": {\r\n\t\t\t\t\t\t\"0\": [{\r\n\t\t\t\t\t\t\t\t\"image\": \"ams000b_1_1.jpg\",\r\n\t\t\t\t\t\t\t\t\"disabled\": false,\r\n\t\t\t\t\t\t\t\t\"position\": 2,\r\n\t\t\t\t\t\t\t\t\"label\": \"Rot\"\r\n\t\t\t\t\t\t\t}, {\r\n\t\t\t\t\t\t\t\t\"image\": \"ams000a_1_1_blub_bla.jpg\",\r\n\t\t\t\t\t\t\t\t\"disabled\": false,\r\n\t\t\t\t\t\t\t\t\"position\": 1,\r\n\t\t\t\t\t\t\t\t\"label\": \"Grün\"\r\n\t\t\t\t\t\t\t}, {\r\n\t\t\t\t\t\t\t\t\"image\": \"amd-phenom-x4-9850-black-ed-2-50ghz-retail.jpg\",\r\n\t\t\t\t\t\t\t\t\"disabled\": false,\r\n\t\t\t\t\t\t\t\t\"position\": 3,\r\n\t\t\t\t\t\t\t\t\"label\": \"blub\"\r\n\t\t\t\t\t\t\t}\r\n\t\t\t\t\t\t]\r\n\t\t\t\t\t},\r\n\t\t\t\t\t\"attributes\": {},\r\n\t\t\t\t\t\"use_default_stores\": []\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t]],\r\n\t\"id\": \"id\"\r\n}"
 				},
 				"description": ""
 			},
@@ -417,7 +451,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\", \"cobby_import_product.updateLink\", [{\r\n\t\t\t\t\"3863\": {\r\n\t\t\t\t\t\"upsell\": null,\r\n\t\t\t\t\t\"crosssell\": null,\r\n\t\t\t\t\t\"related\": [2120, 1529, 1528, 1530, 1944, 1945, 554, 510, 509, 480, 479]\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t]],\r\n\t\"id\": \"id\"\r\n}"
+					"raw": "{\r\n  \"method\" : \"call\",\r\n  \"params\" : [\"{{sessionKey}}\", \"cobby_import_product.updateLink\", [\r\n  {\r\n    \r\n  }]],\r\n  \"id\" : \"b57f054ac8254e58b781346fae3ba72b\"\r\n}"
 				},
 				"description": ""
 			},
@@ -431,7 +465,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\", \"cobby_catalog_product.updateSkus\", [[{\r\n\t\t\t\t\t\"product_id\": 167,\r\n\t\t\t\t\t\"sku\": \"128141\"\r\n\t\t\t\t}\r\n\t\t\t]]],\r\n\t\"id\": \"id\"\r\n}"
+					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\", \"cobby_catalog_product.updateSkus\", [[{\r\n\t\t\t\t\t\"product_id\": 355,\r\n\t\t\t\t\t\"sku\": \"ams000-new\"\r\n\t\t\t\t}\r\n\t\t\t]]],\r\n\t\"id\": \"id\"\r\n}"
 				},
 				"description": ""
 			},
@@ -445,7 +479,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n  \"method\" : \"call\",\r\n  \"params\" : [\"{{sessionKey}}\", \"cobby_import_product.updateStock\", [{\r\n        \"46\" : {\r\n          \"product_id\" : \"46\",\r\n          \"product_type\" : \"simple\",\r\n          \"qty\" : \"100\"\r\n        }\r\n      }\r\n    ]],\r\n  \"id\" : \"id\"\r\n}"
+					"raw": "{\r\n  \"method\" : \"call\",\r\n  \"params\" : [\"{{sessionKey}}\", \"cobby_import_product.updateStock\", [{\r\n        \"46\" : {\r\n          \"product_id\" : \"46\",\r\n          \"product_type\" : \"simple\",\r\n          \"qty\" : \"100\"\r\n        }\r\n      }\r\n    ]],\r\n  \"id\" : \"218a210227cc474a9e37c227c6a8ebe2\"\r\n}"
 				},
 				"description": "cobby_export.exportProducts"
 			},
@@ -473,7 +507,35 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{dessionKey}}\", \"cobby_import_product.updateUrl\", [{\r\n\t\t\t\t\"167\": [{\r\n\t\t\t\t\t\t\"store_id\": 0,\r\n\t\t\t\t\t\t\"name\": \"asd\",\r\n\t\t\t\t\t\t\"url_key\": \"neueurl\"\r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t]],\r\n\t\"id\": \"id\"\r\n}"
+					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\", \"cobby_import_product.updateUrl\", [{\r\n\t\t\t\t\"355\": [{\r\n\t\t\t\t\t\t\"store_id\": 0,\r\n\t\t\t\t\t\t\"name\": \"Dorian Perforated Oxford oxi\",\r\n\t\t\t\t\t\t\"url_key\": \"dorian-preforated-oxford-testurl-hehe-blub-new\"\r\n\t\t\t\t\t}\r\n\t\t\t\t]\r\n\t\t\t}\r\n\t\t]],\r\n\t\"id\": \"id\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Product (importStart)  >= 1.41",
+			"request": {
+				"url": "{{shopUrl}}",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"method\" : \"call\",\r\n\t\"params\" : [\"{{sessionKey}}\", \"cobby_import_product.start\"],\r\n\t\"id\" : \"id\"\r\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Product (importFinish)  >= 1.41",
+			"request": {
+				"url": "{{shopUrl}}",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"method\" : \"call\",\r\n\t\"params\" : [\"{{sessionKey}}\", \"cobby_import_product.finish\", [[{\r\n\t\t\t\t\t\"sku\" : \"test\",\r\n\t\t\t\t\t\"product_id\" : 1\r\n\t\t\t\t}\r\n\t\t\t]]],\r\n\t\"id\" : \"id\"\r\n}"
 				},
 				"description": ""
 			},
@@ -487,7 +549,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\", \"cobby_catalog_product.updateWebsites\", [{\r\n\t\t\t\t\"27\": {\r\n\t\t\t\t\t\"add\": [2],\r\n\t\t\t\t\t\"remove\": [1]\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t]],\r\n\t\"id\": \"id\"\r\n}"
+					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\", \"cobby_catalog_product.updateWebsites\", [{\r\n\t\t\t\t\"355\": {\r\n\t\t\t\t\t\"add\": [4, 5],\r\n\t\t\t\t\t\"remove\": [1]\r\n\t\t\t\t}\r\n\t\t\t}\r\n\t\t]],\r\n\t\"id\": \"id\"\r\n}"
 				},
 				"description": ""
 			},
@@ -501,7 +563,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"method\": \"call\",\r\n\t\"params\": [\"{{sessionKey}}\", \"cobby_queue.list\", []],\r\n\t\"id\": \"id\"\r\n}"
+					"raw": "{\n   \"method\":\"call\",\n   \"params\":[\n      \"{{sessionKey}}\",\n      \"cobby_queue.export\",\n      [        \n      ]\n   ],\n   \"id\":\"id\"\n}"
 				},
 				"description": ""
 			},
@@ -515,7 +577,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n   \"method\":\"call\",\n   \"params\":[\n      \"{{sessionKey}}\",\n      \"cobby_queue.getMaxQueueId\",\n      [\n      ]\n   ],\n   \"id\":\"id\"\n}"
+					"raw": "{\n   \"method\":\"call\",\n   \"params\":[\n      \"{{sessionKey}}\",\n      \"cobby_queue.getMaxQueueId\",\n      [        \n      ]\n   ],\n   \"id\":\"id\"\n}"
 				},
 				"description": ""
 			},
@@ -529,7 +591,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n   \"method\":\"call\",\n   \"params\":[\n      \"{{sessionKey}}\",\n      \"cobby_core_store.list\",\n      [        \n      ]\n   ],\n   \"id\":\"id\"\n}"
+					"raw": "{\n   \"method\":\"call\",\n   \"params\":[\n      \"{{sessionKey}}\",\n      \"cobby_core_store.export\",\n      [        \n      ]\n   ],\n   \"id\":\"id\"\n}"
 				},
 				"description": ""
 			},
@@ -543,7 +605,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n   \"method\":\"call\",\n   \"params\":[\n      \"{{sessionKey}}\",\n      \"cobby_storegroup.list\",\n      [        \n      ]\n   ],\n   \"id\":\"id\"\n}"
+					"raw": "{\n   \"method\":\"call\",\n   \"params\":[\n      \"{{sessionKey}}\",\n      \"cobby_storegroup.export\",\n      [        \n      ]\n   ],\n   \"id\":\"id\"\n}"
 				},
 				"description": "cobby_storegroup.list"
 			},
@@ -585,7 +647,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n   \"method\":\"call\",\n   \"params\":[\n      \"{{sessionKey}}\",\n      \"cobby_core_website.list\",\n      [        \n      ]\n   ],\n   \"id\":\"id\"\n}"
+					"raw": "{\n   \"method\":\"call\",\n   \"params\":[\n      \"{{sessionKey}}\",\n      \"cobby_core_website.export\",\n      [        \n      ]\n   ],\n   \"id\":\"id\"\n}"
 				},
 				"description": ""
 			},
