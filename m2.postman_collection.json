@@ -428,6 +428,41 @@
 			"response": []
 		},
 		{
+			"name": "cobby/export/inventory/sources",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{sessionKey}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{shopUrl}}V1/cobby/export/inventory/sources",
+					"host": [
+						"{{shopUrl}}V1"
+					],
+					"path": [
+						"cobby",
+						"export",
+						"inventory",
+						"sources"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "cobby/queue/max",
 			"request": {
 				"method": "GET",
@@ -929,7 +964,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"jsonData\": \"{\\\"2045\\\":{\\\"product_id\\\":\\\"2045\\\",\\\"product_type\\\":\\\"simple\\\",\\\"qty\\\":\\\"1\\\",\\\"is_in_stock\\\":\\\"1\\\",\\\"inventory_sources\\\":[{\\\"sku\\\":\\\"WSH12-32-Red\\\",\\\"status\\\":\\\"1\\\",\\\"source_code\\\":\\\"default\\\",\\\"quantity\\\":\\\"5\\\"}]}}\"}\r\n"
+					"raw": "{\"jsonData\": \"{\\\"2045\\\":{\\\"product_id\\\":\\\"2045\\\", \\\"sku\\\":\\\"WSH12-32-Red\\\", \\\"product_type\\\":\\\"simple\\\",\\\"qty\\\":\\\"1\\\",\\\"is_in_stock\\\":\\\"1\\\",\\\"inventory_sources\\\":[{\\\"sku\\\":\\\"WSH12-32-Red\\\",\\\"status\\\":\\\"1\\\",\\\"source_code\\\":\\\"default\\\",\\\"quantity\\\":\\\"5\\\"}]}}\"}\r\n"
 				},
 				"url": {
 					"raw": "{{shopUrl}}V1/cobby/import/products/stocks",
@@ -1245,41 +1280,6 @@
 						"cobby",
 						"indexer",
 						"reindex"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "cobby/export/inventory/sources",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer {{sessionKey}}",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{shopUrl}}V1/cobby/export/inventory/sources",
-					"host": [
-						"{{shopUrl}}V1"
-					],
-					"path": [
-						"cobby",
-						"export",
-						"inventory",
-						"sources"
 					]
 				}
 			},
