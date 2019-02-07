@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "1a0db1e8-b94b-48d9-9d02-402e4dbcd695",
+		"_postman_id": "ce550160-3e23-4269-a2e7-8b6b2ebc5730",
 		"name": "Magento 2 from 1.48",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -1254,7 +1254,18 @@
 			"name": "cobby/export/inventory/sources",
 			"request": {
 				"method": "GET",
-				"header": [],
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{sessionKey}}",
+						"type": "text"
+					}
+				],
 				"body": {
 					"mode": "raw",
 					"raw": ""
