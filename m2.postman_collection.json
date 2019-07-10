@@ -566,7 +566,7 @@
 			"response": []
 		},
 		{
-			"name": "V1/integration/admin/token",
+			"name": "login",
 			"event": [
 				{
 					"listen": "test",
