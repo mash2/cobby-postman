@@ -1,572 +1,12 @@
 {
 	"info": {
-		"_postman_id": "941be103-908d-4ec8-8a0a-95dc3160275c",
+		"_postman_id": "9ff3524c-453b-4e69-a503-d71936970599",
 		"name": "Magento 2 1.48.1",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "cobby/store/websites",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer {{sessionKey}}"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{shopUrl}}V1/cobby/store/websites",
-					"host": [
-						"{{shopUrl}}V1"
-					],
-					"path": [
-						"cobby",
-						"store",
-						"websites"
-					]
-				},
-				"description": "list all websites"
-			},
-			"response": []
-		},
-		{
-			"name": "cobby/debug",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer {{sessionKey}}"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{shopUrl}}V1/cobby/debug",
-					"host": [
-						"{{shopUrl}}V1"
-					],
-					"path": [
-						"cobby",
-						"debug"
-					]
-				},
-				"description": "list all websites"
-			},
-			"response": []
-		},
-		{
-			"name": "cobby/store/storeGroups",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer {{sessionKey}}"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{shopUrl}}V1/cobby/store/storeGroups",
-					"host": [
-						"{{shopUrl}}V1"
-					],
-					"path": [
-						"cobby",
-						"store",
-						"storeGroups"
-					]
-				},
-				"description": "list all store groups"
-			},
-			"response": []
-		},
-		{
-			"name": "cobby/store/storeViews",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer {{sessionKey}}"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{shopUrl}}V1/cobby/store/storeViews",
-					"host": [
-						"{{shopUrl}}V1"
-					],
-					"path": [
-						"cobby",
-						"store",
-						"storeViews"
-					]
-				},
-				"description": "list all store views"
-			},
-			"response": []
-		},
-		{
-			"name": "cobby/categories",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer {{sessionKey}}"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{shopUrl}}V1/cobby/categories?storeId=0",
-					"host": [
-						"{{shopUrl}}V1"
-					],
-					"path": [
-						"cobby",
-						"categories"
-					],
-					"query": [
-						{
-							"key": "storeId",
-							"value": "0"
-						}
-					]
-				},
-				"description": "list all categories for store"
-			},
-			"response": []
-		},
-		{
-			"name": "cobby/configs",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer {{sessionKey}}"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{shopUrl}}V1/cobby/configs",
-					"host": [
-						"{{shopUrl}}V1"
-					],
-					"path": [
-						"cobby",
-						"configs"
-					]
-				},
-				"description": "list all configs"
-			},
-			"response": []
-		},
-		{
-			"name": "cobby/report",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer {{sessionKey}}"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{shopUrl}}V1/cobby/report",
-					"host": [
-						"{{shopUrl}}V1"
-					],
-					"path": [
-						"cobby",
-						"report"
-					]
-				},
-				"description": "list all configs"
-			},
-			"response": []
-		},
-		{
-			"name": "cobby/customer/groups",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer {{sessionKey}}"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{shopUrl}}V1/cobby/customer/groups",
-					"host": [
-						"{{shopUrl}}V1"
-					],
-					"path": [
-						"cobby",
-						"customer",
-						"groups"
-					]
-				},
-				"description": "list all customer groups"
-			},
-			"response": []
-		},
-		{
-			"name": "cobby/product/attribute/sets",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer {{sessionKey}}"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{shopUrl}}cobby/product/attribute/sets",
-					"host": [
-						"{{shopUrl}}cobby"
-					],
-					"path": [
-						"product",
-						"attribute",
-						"sets"
-					]
-				},
-				"description": "list all product attribute sets"
-			},
-			"response": []
-		},
-		{
-			"name": "cobby/product/ids",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer {{sessionKey}}"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{shopUrl}}V1/cobby/product/ids?pageNum=0&pageSize=1024",
-					"host": [
-						"{{shopUrl}}V1"
-					],
-					"path": [
-						"cobby",
-						"product",
-						"ids"
-					],
-					"query": [
-						{
-							"key": "pageNum",
-							"value": "0"
-						},
-						{
-							"key": "pageSize",
-							"value": "1024"
-						}
-					]
-				},
-				"description": "list all product ids for page size"
-			},
-			"response": []
-		},
-		{
-			"name": "cobby/product/attributes",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer {{sessionKey}}"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{shopUrl}}V1/cobby/product/attributes?attributeSetId=4",
-					"host": [
-						"{{shopUrl}}V1"
-					],
-					"path": [
-						"cobby",
-						"product",
-						"attributes"
-					],
-					"query": [
-						{
-							"key": "attributeSetId",
-							"value": "4"
-						}
-					]
-				},
-				"description": "list all attributes for attributeset"
-			},
-			"response": []
-		},
-		{
-			"name": "cobby/product/attribute/options",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer {{sessionKey}}"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{shopUrl}}V1/cobby/product/attribute/options?attributeId=93",
-					"host": [
-						"{{shopUrl}}V1"
-					],
-					"path": [
-						"cobby",
-						"product",
-						"attribute",
-						"options"
-					],
-					"query": [
-						{
-							"key": "attributeId",
-							"value": "93"
-						}
-					]
-				},
-				"description": "list all attribute options for attributeId"
-			},
-			"response": []
-		},
-		{
-			"name": "cobby/queue/max",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer {{sessionKey}}"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{shopUrl}}V1/cobby/queue/max",
-					"host": [
-						"{{shopUrl}}V1"
-					],
-					"path": [
-						"cobby",
-						"queue",
-						"max"
-					]
-				},
-				"description": "get max queue Id"
-			},
-			"response": []
-		},
-		{
-			"name": "cobby/indexer",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer {{sessionKey}}"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{shopUrl}}V1/cobby/indexer",
-					"host": [
-						"{{shopUrl}}V1"
-					],
-					"path": [
-						"cobby",
-						"indexer"
-					]
-				},
-				"description": "list cobby indexer"
-			},
-			"response": []
-		},
-		{
-			"name": "cobby/queue",
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer {{sessionKey}}"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{shopUrl}}V1/cobby/queue?minQueueId=0&pageSize=1024",
-					"host": [
-						"{{shopUrl}}V1"
-					],
-					"path": [
-						"cobby",
-						"queue"
-					],
-					"query": [
-						{
-							"key": "minQueueId",
-							"value": "0"
-						},
-						{
-							"key": "pageSize",
-							"value": "1024"
-						}
-					]
-				},
-				"description": "list queue items great queueId"
-			},
-			"response": []
-		},
-		{
-			"name": "cobby/queue",
-			"request": {
-				"method": "DELETE",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json"
-					},
-					{
-						"key": "Authorization",
-						"value": "Bearer {{sessionKey}}"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "{{shopUrl}}V1/cobby/queue",
-					"host": [
-						"{{shopUrl}}V1"
-					],
-					"path": [
-						"cobby",
-						"queue"
-					]
-				},
-				"description": "delete cobby queue"
-			},
-			"response": []
-		},
-		{
-			"name": "login",
+			"name": "Login",
 			"event": [
 				{
 					"listen": "test",
@@ -612,7 +52,606 @@
 			"response": []
 		},
 		{
-			"name": "cobby/export/products",
+			"name": "Websites (export)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{sessionKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{shopUrl}}V1/cobby/store/websites",
+					"host": [
+						"{{shopUrl}}V1"
+					],
+					"path": [
+						"cobby",
+						"store",
+						"websites"
+					]
+				},
+				"description": "list all websites"
+			},
+			"response": []
+		},
+		{
+			"name": "Debug",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{sessionKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{shopUrl}}V1/cobby/debug",
+					"host": [
+						"{{shopUrl}}V1"
+					],
+					"path": [
+						"cobby",
+						"debug"
+					]
+				},
+				"description": "list all websites"
+			},
+			"response": []
+		},
+		{
+			"name": "Storegroup (export)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{sessionKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{shopUrl}}V1/cobby/store/storeGroups",
+					"host": [
+						"{{shopUrl}}V1"
+					],
+					"path": [
+						"cobby",
+						"store",
+						"storeGroups"
+					]
+				},
+				"description": "list all store groups"
+			},
+			"response": []
+		},
+		{
+			"name": "Storeviews (export)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{sessionKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{shopUrl}}V1/cobby/store/storeViews",
+					"host": [
+						"{{shopUrl}}V1"
+					],
+					"path": [
+						"cobby",
+						"store",
+						"storeViews"
+					]
+				},
+				"description": "list all store views"
+			},
+			"response": []
+		},
+		{
+			"name": "Categorie Tree (export)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{sessionKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{shopUrl}}V1/cobby/categories?storeId=0",
+					"host": [
+						"{{shopUrl}}V1"
+					],
+					"path": [
+						"cobby",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "storeId",
+							"value": "0"
+						}
+					]
+				},
+				"description": "list all categories for store"
+			},
+			"response": []
+		},
+		{
+			"name": "Config (export)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{sessionKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{shopUrl}}V1/cobby/configs",
+					"host": [
+						"{{shopUrl}}V1"
+					],
+					"path": [
+						"cobby",
+						"configs"
+					]
+				},
+				"description": "list all configs"
+			},
+			"response": []
+		},
+		{
+			"name": "Config systemcheck (export)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{sessionKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{shopUrl}}V1/cobby/report",
+					"host": [
+						"{{shopUrl}}V1"
+					],
+					"path": [
+						"cobby",
+						"report"
+					]
+				},
+				"description": "list all configs"
+			},
+			"response": []
+		},
+		{
+			"name": "Customergroup (export)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{sessionKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{shopUrl}}V1/cobby/customer/groups",
+					"host": [
+						"{{shopUrl}}V1"
+					],
+					"path": [
+						"cobby",
+						"customer",
+						"groups"
+					]
+				},
+				"description": "list all customer groups"
+			},
+			"response": []
+		},
+		{
+			"name": "Attribute sets (export)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{sessionKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{shopUrl}}cobby/product/attribute/sets",
+					"host": [
+						"{{shopUrl}}cobby"
+					],
+					"path": [
+						"product",
+						"attribute",
+						"sets"
+					]
+				},
+				"description": "list all product attribute sets"
+			},
+			"response": []
+		},
+		{
+			"name": "Product ids (export)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{sessionKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{shopUrl}}V1/cobby/product/ids?pageNum=0&pageSize=1024",
+					"host": [
+						"{{shopUrl}}V1"
+					],
+					"path": [
+						"cobby",
+						"product",
+						"ids"
+					],
+					"query": [
+						{
+							"key": "pageNum",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "1024"
+						}
+					]
+				},
+				"description": "list all product ids for page size"
+			},
+			"response": []
+		},
+		{
+			"name": "Attributes (info)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{sessionKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{shopUrl}}V1/cobby/product/attributes?attributeSetId=4",
+					"host": [
+						"{{shopUrl}}V1"
+					],
+					"path": [
+						"cobby",
+						"product",
+						"attributes"
+					],
+					"query": [
+						{
+							"key": "attributeSetId",
+							"value": "4"
+						}
+					]
+				},
+				"description": "list all attributes for attributeset"
+			},
+			"response": []
+		},
+		{
+			"name": "Attributes (export set attributes)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{sessionKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{shopUrl}}V1/cobby/product/attributes?attributeSetId=4",
+					"host": [
+						"{{shopUrl}}V1"
+					],
+					"path": [
+						"cobby",
+						"product",
+						"attributes"
+					],
+					"query": [
+						{
+							"key": "attributeSetId",
+							"value": "4"
+						}
+					]
+				},
+				"description": "list all attributes for attributeset"
+			},
+			"response": []
+		},
+		{
+			"name": "Attribute options (export)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{sessionKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{shopUrl}}V1/cobby/product/attribute/options?attributeId=93",
+					"host": [
+						"{{shopUrl}}V1"
+					],
+					"path": [
+						"cobby",
+						"product",
+						"attribute",
+						"options"
+					],
+					"query": [
+						{
+							"key": "attributeId",
+							"value": "93"
+						}
+					]
+				},
+				"description": "list all attribute options for attributeId"
+			},
+			"response": []
+		},
+		{
+			"name": "Queue (getMaxQueueId)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{sessionKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{shopUrl}}V1/cobby/queue/max",
+					"host": [
+						"{{shopUrl}}V1"
+					],
+					"path": [
+						"cobby",
+						"queue",
+						"max"
+					]
+				},
+				"description": "get max queue Id"
+			},
+			"response": []
+		},
+		{
+			"name": "Indexer (export)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{sessionKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{shopUrl}}V1/cobby/indexer",
+					"host": [
+						"{{shopUrl}}V1"
+					],
+					"path": [
+						"cobby",
+						"indexer"
+					]
+				},
+				"description": "list cobby indexer"
+			},
+			"response": []
+		},
+		{
+			"name": "Queue (export)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{sessionKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{shopUrl}}V1/cobby/queue?minQueueId=0&pageSize=1024",
+					"host": [
+						"{{shopUrl}}V1"
+					],
+					"path": [
+						"cobby",
+						"queue"
+					],
+					"query": [
+						{
+							"key": "minQueueId",
+							"value": "0"
+						},
+						{
+							"key": "pageSize",
+							"value": "1024"
+						}
+					]
+				},
+				"description": "list queue items great queueId"
+			},
+			"response": []
+		},
+		{
+			"name": "Queue (delete)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer {{sessionKey}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{shopUrl}}V1/cobby/queue",
+					"host": [
+						"{{shopUrl}}V1"
+					],
+					"path": [
+						"cobby",
+						"queue"
+					]
+				},
+				"description": "delete cobby queue"
+			},
+			"response": []
+		},
+		{
+			"name": "Product (export)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -645,7 +684,7 @@
 			"response": []
 		},
 		{
-			"name": "cobby/import/products/links",
+			"name": "Product (updateLink)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -679,7 +718,7 @@
 			"response": []
 		},
 		{
-			"name": "cobby/import/products/categories",
+			"name": "Product (updateCategoryAssociation",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -713,7 +752,7 @@
 			"response": []
 		},
 		{
-			"name": "cobby/import/products/tierPrices",
+			"name": "Product (update tierPrices)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -747,7 +786,7 @@
 			"response": []
 		},
 		{
-			"name": "cobby/import/products",
+			"name": "Product (import)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -780,7 +819,7 @@
 			"response": []
 		},
 		{
-			"name": "cobby/beforeImport",
+			"name": "Cobby (beforeImport)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -812,7 +851,7 @@
 			"response": []
 		},
 		{
-			"name": "cobby/import/products/dispatch",
+			"name": "Product (importDispatch)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -846,7 +885,7 @@
 			"response": []
 		},
 		{
-			"name": "cobby/import/products/start",
+			"name": "Product (importStart)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -880,7 +919,7 @@
 			"response": []
 		},
 		{
-			"name": "cobby/import/products/finish",
+			"name": "Product (importFinish)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -914,7 +953,7 @@
 			"response": []
 		},
 		{
-			"name": "cobby/afterImport",
+			"name": "Cobby (afterImport)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -946,7 +985,7 @@
 			"response": []
 		},
 		{
-			"name": "cobby/import/products/stocks",
+			"name": "Product (updateStocks)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -980,7 +1019,7 @@
 			"response": []
 		},
 		{
-			"name": "cobby/import/products/images",
+			"name": "Product (updateImages)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -1014,7 +1053,7 @@
 			"response": []
 		},
 		{
-			"name": "cobby/import/products/grouped",
+			"name": "Product (updateGroupedProductsAssociation)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -1048,7 +1087,7 @@
 			"response": []
 		},
 		{
-			"name": "cobby/import/products/configurable",
+			"name": "Product (updateConfigurable)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -1082,7 +1121,7 @@
 			"response": []
 		},
 		{
-			"name": "cobby/import/products/urls",
+			"name": "Product (updateUrls)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -1116,7 +1155,7 @@
 			"response": []
 		},
 		{
-			"name": "cobby/import/products/min_qty",
+			"name": "Product (updateMin_qty)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -1150,7 +1189,7 @@
 			"response": []
 		},
 		{
-			"name": "cobby/product/attribute/options",
+			"name": "Attribute options (import)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -1184,7 +1223,7 @@
 			"response": []
 		},
 		{
-			"name": "cobby/import/products/bundle",
+			"name": "Product (updateBundle)",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -1218,7 +1257,7 @@
 			"response": []
 		},
 		{
-			"name": "cobby/indexer/reindex",
+			"name": "Indexer (reindex)",
 			"request": {
 				"method": "POST",
 				"header": [
